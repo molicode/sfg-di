@@ -22,12 +22,14 @@ public class SfgDiApplication {
     System.out.println("--- The Best Pet is ---");
     System.out.println(petController.whichPetIsTheBest());
 
+    MyController myController = (MyController) ctx.getBean("myController");
+
     I18nController i18nController = (I18nController) ctx.getBean("i18nController");
     System.out.println(i18nController.sayHello());
 
-    MyController myController = (MyController) ctx.getBean("myController");
+    //		String greeting = myController.sayHello();
 
-    System.out.println("------- Primary Bean");
+    System.out.println("------ Primary Bean");
     System.out.println(myController.sayHello());
 
     System.out.println("------ Property");

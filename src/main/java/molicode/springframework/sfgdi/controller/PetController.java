@@ -15,4 +15,5 @@ public class PetController {
   public String whichPetIsTheBest() {
     return petService.getPetType();
   }
+
 }
