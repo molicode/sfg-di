@@ -1,8 +1,6 @@
 package molicode.springframework.sfgdi.services;
 
-import org.springframework.stereotype.Service;
-
-@Service
+//@Service
 public class PropertyGreetingService implements GreetingService {
 
   @Override
