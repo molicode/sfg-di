@@ -11,10 +11,8 @@ import molicode.springframework.sfgdi.services.PropertyGreetingService;
 import molicode.springframework.sfgdi.services.SetterGreetingService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Profile;
 
-@ImportResource("classpath:sfgdi-config.xml")
 @Configuration
 public class GreetingServiceConfig {
 
@@ -52,10 +50,10 @@ public class GreetingServiceConfig {
     return new I18nEnglishGreetingService(englishGreetingRepository);
   }
 
-//  @Bean
-//  ConstructorGreetingService constructorGreetingService() {
-//    return new ConstructorGreetingService();
-//  }
+  @Bean
+  ConstructorGreetingService constructorGreetingService() {
+    return new ConstructorGreetingService();
+  }
 
   @Bean
   PropertyGreetingService propertyGreetingService() {
