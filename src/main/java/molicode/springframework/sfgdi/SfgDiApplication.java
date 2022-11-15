@@ -6,6 +6,7 @@ import molicode.springframework.sfgdi.controller.MyController;
 import molicode.springframework.sfgdi.controller.PetController;
 import molicode.springframework.sfgdi.controller.PropertyInjectedController;
 import molicode.springframework.sfgdi.controller.SetterInjectedController;
+import molicode.springframework.sfgdi.datasource.FakeDataSource;
 import molicode.springframework.sfgdi.services.PrototypeBean;
 import molicode.springframework.sfgdi.services.SingletonBean;
 import org.springframework.boot.SpringApplication;
@@ -55,6 +56,12 @@ public class SfgDiApplication {
     System.out.println(prototypeBean1.getMyScope());
     PrototypeBean prototypeBean2 = ctx.getBean(PrototypeBean.class);
     System.out.println(prototypeBean2.getMyScope());
+
+    System.out.println("--- Properties File----------");
+    FakeDataSource fakeDataSource =  ctx.getBean(FakeDataSource.class);
+    System.out.println(fakeDataSource.getUsername());
+    System.out.println(fakeDataSource.getPassword());
+    System.out.println(fakeDataSource.getJdbcurl());
 
   }
 
