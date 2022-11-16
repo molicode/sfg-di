@@ -1,7 +1,19 @@
 spring:
   profiles:
-    active: dog,EN,dev
+    active:
+      - dog
+      - EN
+      - dev
+
 molicode:
   username: YmlUserName
   password: YmlPassword
   jdbcurl: YmlUrl
+
+---
+spring:
+  profiles: prod
+molicode:
+  username: YmlProdUserName
+  password: YmlProdPassword
+  jdbcurl: YmlProdUrl
