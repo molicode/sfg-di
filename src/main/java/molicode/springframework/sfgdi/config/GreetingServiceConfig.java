@@ -20,11 +20,11 @@ import org.springframework.context.annotation.Profile;
 public class GreetingServiceConfig {
 
   @Bean
-  FakeDataSource fakeDataSource(SfgConfiguration sfgConfiguration) {
+  FakeDataSource fakeDataSource(SfgConstructorConfig sfgConstructorConfig) {
     FakeDataSource fakeDataSource = new FakeDataSource();
-    fakeDataSource.setUsername(sfgConfiguration.getUsername());
-    fakeDataSource.setPassword(sfgConfiguration.getPassword());
-    fakeDataSource.setJdbcurl(sfgConfiguration.getJdbcurl());
+    fakeDataSource.setUsername(sfgConstructorConfig.getUsername());
+    fakeDataSource.setPassword(sfgConstructorConfig.getPassword());
+    fakeDataSource.setJdbcurl(sfgConstructorConfig.getJdbcurl());
     return fakeDataSource;
   }
 
