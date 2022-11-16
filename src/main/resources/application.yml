@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dog,EN,qa
+    active: dog,EN,dev
 molicode:
   username: YmlUserName
   password: YmlPassword
