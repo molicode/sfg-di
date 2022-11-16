@@ -10,10 +10,12 @@ import molicode.springframework.sfgdi.services.I18nEnglishGreetingService;
 import molicode.springframework.sfgdi.services.I18nSpanishGreetingService;
 import molicode.springframework.sfgdi.services.PropertyGreetingService;
 import molicode.springframework.sfgdi.services.SetterGreetingService;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
+@EnableConfigurationProperties(SfgConstructorConfig.class)
 @Configuration
 public class GreetingServiceConfig {
 

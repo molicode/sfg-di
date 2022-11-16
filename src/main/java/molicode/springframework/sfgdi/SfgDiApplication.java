@@ -1,6 +1,7 @@
 package molicode.springframework.sfgdi;
 
 import molicode.springframework.sfgdi.config.SfgConfiguration;
+import molicode.springframework.sfgdi.config.SfgConstructorConfig;
 import molicode.springframework.sfgdi.controller.ConstructorInjectedController;
 import molicode.springframework.sfgdi.controller.I18nController;
 import molicode.springframework.sfgdi.controller.MyController;
@@ -69,6 +70,13 @@ public class SfgDiApplication {
     System.out.println(sfgConfiguration.getUsername());
     System.out.println(sfgConfiguration.getPassword());
     System.out.println(sfgConfiguration.getJdbcurl());
+
+    System.out.println("--- Constructor Binding ----------");
+    SfgConstructorConfig sfgConstructorConfig = ctx.getBean(SfgConstructorConfig.class);
+    System.out.println(sfgConstructorConfig.getUsername());
+    System.out.println(sfgConstructorConfig.getPassword());
+    System.out.println(sfgConstructorConfig.getJdbcurl());
+
 
   }
 
